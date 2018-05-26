@@ -1,6 +1,6 @@
 {% set name = "betse" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "845896f4c30b3970d5bd9501e0ca754eef5af0d742de76103f66c8c8c58e4eca" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "ef2ebe74c2b6ed7db110fe06258aa53c51846eada063a2ca28e2581cfdd66341" %}
 
 package:
   name: {{ name|lower }}
