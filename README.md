@@ -25,10 +25,10 @@ All platforms:
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-betse-green.svg)](https://anaconda.org/conda-forge/betse)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-betse-green.svg)](https://anaconda.org/conda-forge/betse) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/betse.svg)](https://anaconda.org/conda-forge/betse) |
 
 Installing betse
 ================
