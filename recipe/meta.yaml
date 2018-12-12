@@ -21,11 +21,11 @@ build:
 requirements:
   host:
     - python >=3.5
-    - setuptools
+    - setuptools >=3.3
     - pip
   run:
     - python >=3.5
-    - setuptools
+    - setuptools >=3.3
     - dill >=0.2.3
     - graphviz >=2.38.0
     - matplotlib >=1.5.0
