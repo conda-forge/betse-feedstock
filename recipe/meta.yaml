@@ -15,7 +15,7 @@ build:
   number: 0
   entry_points:
     - betse = betse.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
 requirements:
