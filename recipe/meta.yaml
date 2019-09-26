@@ -1,6 +1,6 @@
 {% set name = "betse" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "c56d0436e3025dd6f146cc6eea9a03b814c98de8d76cb6b4faaf93bb2a4b0085" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "51009daff6d1a697ec8c5ac6132f44a7f39ddef838c242c1775c7bed59d6159f" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - betse = betse.__main__:main
   script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv"
