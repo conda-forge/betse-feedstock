@@ -9,12 +9,14 @@ Feedstock license: BSD 3-Clause
 
 Summary: BETSE, the BioElectric Tissue Simulation Engine
 
-BETSE (BioElectric Tissue Simulation Engine) is an open-source cross-platform finite
-volume simulator for 2D computational multiphysics problems in the life sciences -
-including electrodiffusion, electro-osmosis, galvanotaxis, voltage-gated ion channels,
-gene regulatory networks, and biochemical reaction networks (e.g., metabolism). BETSE is
-portably implemented in pure Python 3, continuously stress-tested with GitLab-CI *
-Appveyor + py.test, and permissively distributed under the BSD 2-clause license.
+BETSE (BioElectric Tissue Simulation Engine) is an open-source
+cross-platform finite volume simulator for 2D computational multiphysics
+problems in the life sciences - including electrodiffusion,
+electro-osmosis, galvanotaxis, voltage-gated ion channels, gene regulatory
+networks, and biochemical reaction networks (e.g., metabolism). BETSE is
+portably implemented in pure Python 3, continuously stress-tested with
+GitLab-CI * Appveyor + py.test, and permissively distributed under the BSD
+2-clause license.
 
 
 Current build status
