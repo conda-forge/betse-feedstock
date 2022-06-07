@@ -1,6 +1,6 @@
 {% set name = "betse" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "5b91706195227391d94b4bca7c2a31a1a040226eb6fc5ae91a98e9d94dae72ea" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "a546787eb4782157e334729a899d5a687a8e0754a13170bef91a1ef393f58b88" %}
 
 package:
   name: {{ name|lower }}
@@ -12,10 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - betse = betse.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv
   noarch: python
 
 requirements:
