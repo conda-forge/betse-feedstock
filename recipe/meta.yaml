@@ -1,6 +1,6 @@
 {% set name = "betse" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "5b91706195227391d94b4bca7c2a31a1a040226eb6fc5ae91a98e9d94dae72ea" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "a546787eb4782157e334729a899d5a687a8e0754a13170bef91a1ef393f58b88" %}
 
 package:
   name: {{ name|lower }}
@@ -8,31 +8,32 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - betse = betse.__main__:main
   script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
 requirements:
-  host:
-    - python >=3.5
+  build:
+    - python >=3.8
     - setuptools >=38.2.0
     - pip
   run:
-    - python >=3.5
+    - python >=3.8
     - setuptools >=38.2.0
+    - beartype >=0.10.0
     - dill >=0.2.3
     - distro >=1.0.4
     - graphviz >=2.38.0
-    - matplotlib-base >=1.5.0
+    - matplotlib-base >=3.3.4
     - networkx >=2.0
-    - numpy >=1.13.0
-    - pillow >=2.3.0
+    - numpy >=1.22.0
+    - pillow >=5.3.0
     - pydot >=1.0.28
     - ruamel.yaml >=0.15.24
     - scipy >=0.12.0
@@ -47,13 +48,13 @@ test:
     - betse.lib
     - betse.util
   commands:
-    - betse --headless
-    - betse --headless --help
-    - betse --headless --version
-    - betse --headless info
+    - betse --matplotlib-backend=agg
+    - betse --matplotlib-backend=agg --help
+    - betse --matplotlib-backend=agg --version
+    - betse --matplotlib-backend=agg info
 
 about:
-  home: https://gitlab.com/betse/betse
+  home: https://github.com/betsee/betse
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
@@ -65,10 +66,10 @@ about:
     electro-osmosis, galvanotaxis, voltage-gated ion channels, gene regulatory
     networks, and biochemical reaction networks (e.g., metabolism). BETSE is
     portably implemented in pure Python 3, continuously stress-tested with
-    GitLab-CI * Appveyor + py.test, and permissively distributed under the BSD
+    GitHub Actions + pytest + tox, and permissively distributed under the BSD
     2-clause license.
-  doc_url: https://www.dropbox.com/s/3rsbrjq2ljal8dl/BETSE_Documentation_April10th2019.pdf?dl=0
-  dev_url: https://gitlab.com/betse/betse
+  doc_url: https://www.dropbox.com/s/n8qfms2oks9cvv2/BETSE04_Documentation_Dec1st2016.pdf?dl=0
+  dev_url: https://github.com/betsee/betse
 
 extra:
   recipe-maintainers:
