@@ -1,6 +1,6 @@
 {% set name = "betse" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "79da8b9a4ceac3a164e7ce0047a3aa5be07a86c56c0de37e8f33d5c27026cec8" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "8dab1de8fc7b9ebdb8c23fab8f689e4f8bf3d5267c8d32207f4a456757fac050" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
