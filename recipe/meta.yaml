@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "betse" %}
 {% set version = "1.4.1" %}
 {% set sha256 = "79da8b9a4ceac3a164e7ce0047a3aa5be07a86c56c0de37e8f33d5c27026cec8" %}
@@ -8,11 +9,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - betse = betse.__main__:main
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv
@@ -20,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python {{ python_min }}
     - hatchling >=1.14.0
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - beartype >=0.18.0
     - dill >=0.2.3
     - distro >=1.0.4
@@ -40,6 +41,8 @@ requirements:
     - pyside6
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - betse
     - betse.cli
